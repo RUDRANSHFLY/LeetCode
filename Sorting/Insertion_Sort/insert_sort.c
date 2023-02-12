@@ -9,18 +9,23 @@ static void printArray(int arr[],int s){
 }
 
 static void insert_sort(int arr[] , int s){
-    for(int i = 0 ; i < s - 1 ; i++ ){
-        int sm = i ;
-        for(int j = i + 1 ; j < s ; j++){
-            if(arr[sm] > arr[j]){
-                sm = j ;
-            }
+    for(int i = 1 ; i < s ; i++ ){
+        int cur = arr[i] ;
+        int j = i - 1 ;
+
+        while (j >= 0 && arr[j] > cur)
+        {
+            /* code */
+            arr[j+1] = arr[j] ;
+            j--;
         }
-        int t = arr[sm] ;
-        arr[sm] = arr[i];
-        arr[i] = t ; 
+
+        arr[j+1] = cur ;
+        
     }
+       
 }
+
 
 int main(){
     printf("Enter the size of Array :-");
