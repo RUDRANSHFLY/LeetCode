@@ -28,7 +28,9 @@ int main(){
     scanf("%d",&size);
     int arr[size];
     for(int i = 0 ; i < size ; i++){
-        arr[i] = scanf("%d",&i);
+        int t ;
+        scanf("%d",&t);
+        arr[i] = t ;
     }
     printf("THE INPUT ARRAY : - ");
     printArray(arr,size);
